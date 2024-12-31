@@ -27,6 +27,18 @@ username_field.send_keys('pythonstudent')
 password_field.send_keys('pythonstudent123$')
 driver.execute_script("arguments[0].click();",login_button)
 
+
+#Locate the elements dropdown
+elements=WebDriverWait(driver,5).\
+    until(EC.visibility_of_element_located((By.XPATH,'//*[@id="app"]/div/div/div/div[1]/div/div/div[1]/span/div')))
+elements.click()
+
+
+#Locate the form fields
+
+
+#Fill in the form fields
+
 input("Press Enter to close the driver")
 driver.quit()
 
